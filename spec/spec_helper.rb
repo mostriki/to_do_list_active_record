@@ -3,7 +3,7 @@ require("pg")
 require("list")
 require("task")
 
-DB = PG.connect({:dbname => "to_do_test"})
+DB = PG.connect({:dbname => "to_do_test1"})
 
 RSpec.configure do |config|
   config.after(:each) do
