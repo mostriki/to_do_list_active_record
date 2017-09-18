@@ -20,6 +20,7 @@ describe(Task) do
     end
   end
 
+# ////////
   describe("#save") do
     it("adds a task to the array of saved tasks") do
       test_task = Task.new({:description => "learn SQL", :list_id => 1})
@@ -27,6 +28,7 @@ describe(Task) do
       expect(Task.all()).to(eq([test_task]))
     end
   end
+# ////////
 
   describe("#description") do
     it("lets you read the description out") do
