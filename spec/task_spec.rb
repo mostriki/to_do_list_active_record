@@ -60,5 +60,3 @@ describe(Task) do
     end
   end
 end
-
-# SELECT * FROM tasks ORDER BY due_date
