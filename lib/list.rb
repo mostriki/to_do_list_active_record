@@ -25,7 +25,7 @@ class List
   def ==(another_list)
     self.name().==(another_list.name()).&(self.id().==(another_list.id()))
   end
-# ////////
+
   def self.find(id)
     found_list = nil
     List.all().each() do |list|
@@ -35,16 +35,16 @@ class List
     end
     found_list
   end
-# ////////
+
     def tasks
     list_tasks = []
     tasks = DB.exec("SELECT * FROM tasks WHERE list_id = #{self.id()};")
     tasks.each() do |task|
       description = task.fetch("description")
       list_id = task.fetch("list_id").to_i()
-      list_tasks.push(Task.new({:description => description, :list_id => list_id}))
+      list_tasks.push(Task.new({:description => description,  :due_date => "2017-09-25", :list_id => list_id}))
     end
     list_tasks
   end
-# ////////
+
 end

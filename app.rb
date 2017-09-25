@@ -6,7 +6,7 @@ require ("./lib/task")
 require("./lib/list")
 require ("pg")
 
-DB = PG.connect({:dbname => "to_do1"})
+DB = PG.connect({:dbname => "to_do"})
 
 get('/') do
   erb(:index)
