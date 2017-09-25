@@ -13,7 +13,6 @@ class Task
     returned_tasks.each() do |task|
       description = task.fetch("description")
       due_date = task.fetch("due_date")
-# The information comes out of the database as a string.
       list_id = task.fetch("list_id").to_i()
       tasks.push(Task.new({:description => description, :due_date => due_date, :list_id => list_id}))
     end
