@@ -1,7 +1,3 @@
-require ("rspec")
-require ("pg")
-require ("pry")
-require ("task")
 require("spec_helper")
 
 # DB is a constant. A constant is a variable that's available everywhere in your program. They should be used very rarely, and generally only for application-wide configuration settings like the name of your database. By convention, Constants have all upper-case names.

@@ -18,7 +18,7 @@ post("/lists") do
   list = List.new({:name => name, :id => nil})
   list.save()
   @lists = List.all()
-  erb(:index)
+  erb(:success)
 end
 
 get("/lists/:id") do
@@ -26,7 +26,7 @@ get("/lists/:id") do
   erb(:list)
 end
 
-post("/tasks") do
+post("/lists") do
   description = params.fetch("description")
   due_date = params.fetch("due_date")
   list_id = params.fetch("list_id").to_i()

@@ -1,4 +1,5 @@
 require("rspec")
+require("pry")
 require("pg")
 require("list")
 require("task")
